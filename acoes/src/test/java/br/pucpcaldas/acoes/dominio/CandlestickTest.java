@@ -39,4 +39,10 @@ public class CandlestickTest {
         Candlestick umCandle = new Candlestick(50.0, 40.0, 55.0, 35.0, 1500.00, LocalDate.now());
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void deveRetornarUmaExcecaoParaDataNula() {
+        // Arranjo, Ação, Asserção
+        Candlestick umCandle = new Candlestick(50.0, 40.0, 35.0, 55.0, 1500.00, null);
+    }
+
 }

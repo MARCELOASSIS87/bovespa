@@ -36,6 +36,9 @@ public class Candlestick {
         if (maximo < minimo)
             throw new IllegalArgumentException("preço máximo deve ser maior ou igual ao mínimo.");
 
+        if (data == null)
+            throw new IllegalArgumentException("data não pode ser nula.");
+
         this.abertura = abertura;
         this.fechamento = fechamento;
         this.minimo = minimo;
