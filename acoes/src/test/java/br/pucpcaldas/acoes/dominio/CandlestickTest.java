@@ -33,4 +33,10 @@ public class CandlestickTest {
 
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void deveRetornarUmaExcecaoParaPrecoMaximoMenorDoQueMinimo() {
+        // Arranjo, Ação, Asserção
+        Candlestick umCandle = new Candlestick(50.0, 40.0, 55.0, 35.0, 1500.00, LocalDate.now());
+    }
+
 }

@@ -8,8 +8,8 @@ import org.joda.time.LocalDate;
  * da classe <code>Negocio</code>
  * 
  * @author Luiz Alberto (gomes.luiz@gmail.com)
- * @since  2020-03-04
- * @version 1.0 
+ * @since 2020-03-04
+ * @version 1.0
  * @see Negocio
  */
 public class Candlestick {
@@ -22,16 +22,20 @@ public class Candlestick {
 
     /**
      * Construtor da classe.
-
-     * @param abertura      preço de abertura
-     * @param fechamento    preço de fechamento
-     * @param minimo        preço mínimo
-     * @param maximo        preço máximo
-     * @param volume        volume negociado
-     * @param data          data da negociação
+     * 
+     * @param abertura   preço de abertura
+     * @param fechamento preço de fechamento
+     * @param minimo     preço mínimo
+     * @param maximo     preço máximo
+     * @param volume     volume negociado
+     * @param data       data da negociação
      */
     public Candlestick(double abertura, double fechamento, double minimo, double maximo, double volume,
             LocalDate data) {
+
+        if (maximo < minimo)
+            throw new IllegalArgumentException("preço máximo deve ser maior ou igual ao mínimo.");
+
         this.abertura = abertura;
         this.fechamento = fechamento;
         this.minimo = minimo;
@@ -88,20 +92,18 @@ public class Candlestick {
     /**
      * Retorna a data da negociação
      * 
-     * @return  data da negociação
+     * @return data da negociação
      */
     public LocalDate getData() {
         return data;
     }
 
-	public boolean isAlta() {
-		return this.abertura < this.fechamento;
-	}
+    public boolean isAlta() {
+        return this.abertura < this.fechamento;
+    }
 
-	public boolean isBaixa() {
-		return this.abertura > this.fechamento;
-	}
-
-
+    public boolean isBaixa() {
+        return this.abertura > this.fechamento;
+    }
 
 }
