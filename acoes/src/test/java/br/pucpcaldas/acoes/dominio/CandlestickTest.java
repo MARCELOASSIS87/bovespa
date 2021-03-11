@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.joda.time.LocalDate;
 import org.junit.Test;
 
-public class TestaCandlestick {
+public class CandlestickTest {
 
     @Test
     public void deveRetornarTrueParaAberturaMenorQueFehamento() {

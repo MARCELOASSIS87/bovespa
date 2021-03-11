@@ -8,7 +8,7 @@ import java.util.List;
 import org.joda.time.LocalDate;
 import org.junit.Test;
 
-public class TestaFabricaDeCandlestick {
+public class FabricaDeCandlestickTest {
 
     @Test
     public void deveRetornarUmCandleDeUmaSequenciaDeNegocios() {

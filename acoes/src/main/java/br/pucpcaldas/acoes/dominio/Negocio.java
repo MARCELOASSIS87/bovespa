@@ -23,6 +23,9 @@ public class Negocio {
      * @param data       data da negociação.
      */
     public Negocio(double preco, int quantidade, LocalDate data) {
+        if (data == null)
+            throw new IllegalArgumentException("data não pode ser nula");
+
         this.preco = preco;
         this.quantidade = quantidade;
         this.data = data;
@@ -56,8 +59,8 @@ public class Negocio {
     }
 
     /**
-     * Retorna o volume negociado que é o resultado
-     * da multiplicação do preco pela quantidade negociada.
+     * Retorna o volume negociado que é o resultado da multiplicação do preco pela
+     * quantidade negociada.
      * 
      * @return volume negociado.
      */
