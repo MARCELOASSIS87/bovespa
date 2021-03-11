@@ -32,4 +32,11 @@ public class NegocioTest {
         Negocio umNegocio = new Negocio(-1.5, 4,  LocalDate.now());
 
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void deveRetornarUmaExcecaoUmNegocioComPrecoZero() {
+        // Arranjo, Ação e Asserção
+        Negocio umNegocio = new Negocio(0, 4,  LocalDate.now());
+
+    }
 }

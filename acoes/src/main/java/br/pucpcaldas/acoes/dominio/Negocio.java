@@ -24,11 +24,11 @@ public class Negocio {
      */
     public Negocio(double preco, int quantidade, LocalDate data) {
         
-        if (preco < 0.0)
-            throw new IllegalArgumentException("preço não pode ser negativo");
+        if (preco <= 0.0)
+            throw new IllegalArgumentException("preço não pode ser zero ou negativo.");
 
         if (data == null)
-            throw new IllegalArgumentException("data não pode ser nula");
+            throw new IllegalArgumentException("data não pode ser nula.");
 
         this.preco = preco;
         this.quantidade = quantidade;
