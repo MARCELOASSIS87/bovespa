@@ -23,6 +23,10 @@ public class Negocio {
      * @param data       data da negociação.
      */
     public Negocio(double preco, int quantidade, LocalDate data) {
+        
+        if (preco < 0.0)
+            throw new IllegalArgumentException("preço não pode ser negativo");
+
         if (data == null)
             throw new IllegalArgumentException("data não pode ser nula");
 
