@@ -33,6 +33,10 @@ public class Candlestick {
     public Candlestick(double abertura, double fechamento, double minimo, double maximo, double volume,
             LocalDate data) {
 
+        if ((abertura < 0.0) || (fechamento < 0.0) || (minimo < 0.0) || (maximo < 0.0) || 
+            (volume < 0.0))
+            throw new IllegalArgumentException("valores negativos não são permitidos.");
+
         if (maximo < minimo)
             throw new IllegalArgumentException("preço máximo deve ser maior ou igual ao mínimo.");
 
