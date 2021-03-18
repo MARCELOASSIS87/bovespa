@@ -61,4 +61,21 @@ public class FabricaDeCandlestickTest {
         assertEquals("Preço de máximo: ", 45.0, umCandlestick.getMaximo(), 0.00001);
         assertEquals("Volume Negociado: ", 16760, umCandlestick.getVolume(), 0.00001);
     }
+
+    @Test
+    public void deveRetornarUmCandleDeParaNegociosEmOrdemDecrescente() {
+        
+        List<Negocio> negocios = Arrays.asList(negocio2, negocio4, negocio1, negocio3);
+        CandlestickFabrica umFabricaDeCandlestick = new CandlestickFabrica();
+
+        // Ação
+        Candlestick umCandlestick = umFabricaDeCandlestick.constroiCandleParaData(negocios, hoje);
+
+        // Asserção
+        assertEquals("Preço de abertura: ", 45.0, umCandlestick.getAbertura(), 0.00001);
+        assertEquals("Preço de fechamento: ", 39.8, umCandlestick.getFechamento(), 0.00001);
+        assertEquals("Preço de mínimo: ", 39.8, umCandlestick.getMinimo(), 0.00001);
+        assertEquals("Preço de máximo: ", 45.0, umCandlestick.getMaximo(), 0.00001);
+        assertEquals("Volume Negociado: ", 16760, umCandlestick.getVolume(), 0.00001);
+    }
 }
