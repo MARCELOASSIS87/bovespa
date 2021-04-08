@@ -41,7 +41,7 @@
           <execution>
             <phase>package</phase>
             <goals>
-              <goal>simple</goal>
+              <goal>single</goal>
             </goals>
 
             <configuration>
