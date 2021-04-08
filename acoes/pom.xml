@@ -10,6 +10,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.source>15</maven.compiler.source>
+    <maven.compiler.target>15</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -33,11 +35,29 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>
-          <release>15</release>
-        </configuration>
+        <artifactId>maven-assembly-plugin</artifactId>
+
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>simple</goal>
+            </goals>
+
+            <configuration>
+              <archive>
+                <manifest>
+                  <mainClass>App</mainClass>
+                </manifest>
+              </archive>
+              <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
+            </configuration>
+
+          </execution>
+        </executions>
+
       </plugin>
     </plugins>
   </build>
