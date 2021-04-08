@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.joda.time.LocalDate;
 import org.junit.Test;
 
+
 public class NegocioTest {
 
     @Test
