@@ -1,5 +1,6 @@
 package br.pucpcaldas.acoes.dominio;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.joda.time.LocalDate;
@@ -16,7 +17,7 @@ public class CandlestickTest {
         boolean houveUmaAlta = umCandle.isAlta();
 
         // Asserção
-        assertTrue(houveUmaAlta);
+        assertFalse(houveUmaAlta);
 
     }
 
