@@ -17,7 +17,7 @@ public class CandlestickTest {
         boolean houveUmaAlta = umCandle.isAlta();
 
         // Asserção
-        assertFalse(houveUmaAlta);
+        assertTrue(houveUmaAlta);
 
     }
 
