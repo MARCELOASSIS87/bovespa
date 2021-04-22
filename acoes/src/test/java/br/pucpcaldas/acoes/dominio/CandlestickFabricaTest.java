@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 
-public class FabricaDeCandlestickTest {
+public class CandlestickFabricaTest {
 
     private LocalDate hoje;
     private Negocio negocio1;
