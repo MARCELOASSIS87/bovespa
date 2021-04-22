@@ -36,7 +36,7 @@ jobs:
         with:
           java-version: '15'
           distribution: 'adopt'
-      - name: Configure Git User 
+      - name: Configure The Git User 
         run: |
           git config user.email "gomes.luiz@gmail.com"
           git config user.name "Luiz Alberto"
