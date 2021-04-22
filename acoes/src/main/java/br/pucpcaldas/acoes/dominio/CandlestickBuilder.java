@@ -13,7 +13,6 @@ public class CandlestickBuilder {
 
     public CandlestickBuilder abertura(double abertura) {
         this._abertura = abertura;
-
         return this;
     }
 
@@ -46,6 +45,7 @@ public class CandlestickBuilder {
     }
 
     public Candlestick build() {
-        return new Candlestick(this._abertura, this._fechamento, this._minimo, this._maximo, this._volume, this._data);
+        return new Candlestick(this._abertura, this._fechamento, this._minimo, 
+            this._maximo, this._volume, this._data);
     }
 }

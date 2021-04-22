@@ -28,7 +28,7 @@ public class Candlestick {
      * @param minimo     preço mínimo
      * @param maximo     preço máximo
      * @param volume     volume negociado
-     * @param data2      data da negociação
+     * @param data       data da negociação
      */
     public Candlestick(double abertura, double fechamento, double minimo, double maximo, double volume,
             LocalDate data) {
@@ -94,7 +94,6 @@ public class Candlestick {
     public double getVolume() {
         return volume;
     }
-
     /**
      * Retorna a data da negociação
      * 
