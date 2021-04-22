@@ -3,7 +3,7 @@
   <groupId>br.pucpcaldas.acoes</groupId>
   <artifactId>acoes</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <name>acoes</name>
   <url>http://maven.apache.org</url>
 
@@ -36,7 +36,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/gomesluiz/bovespa.git</developerConnection>
-    <tag>acoes-1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
