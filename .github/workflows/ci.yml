@@ -24,7 +24,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file acoes/pom.xml
 
-  deploy_package:
+  deploy_release:
 
     runs-on: ubuntu-latest
 
@@ -36,10 +36,13 @@ jobs:
         with:
           java-version: '15'
           distribution: 'adopt'
-      - name: Deploy in Package
+      - name: Configure Git User 
         run: |
-          mvn -B versions:set -DnewVersion=$GITHUB_SHA -DgenerateBackupPoms=false --file acoes/pom.xml
-          mvn --batch-mode deploy --file acoes/pom.xml -DskipTests
+          git config user.email "gomes.luiz@gmail.com"
+          git config user.name "Luiz Alberto"
+      - name: Deploy Release
+        run: |
+          mvn -B release:prepare release:perform --file acoes/pom.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
